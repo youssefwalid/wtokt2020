@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+
+<body>
+
+  <h2>Mini Opdracht 4</h2>
+<input type = "button" id="a" onclick="functie4a()" value = "A">
+<input type = "button" id="b" onclick="functie4b()" value = "B">
+<input type = "button" id="c" onclick="functie4c()" value = "C">
+<input type = "button" id="d" onclick="functie4d()" value = "D">
+
+<div id="demo"> 
+
+</div>
+
+<script>
+/*
+4.
+Maak 4 knoppen naast elkaar.
+Op de ene knop staat A, de andere B, die daarnaast C en die daarnaast D.
+ 
+Op het moment dat je op knop C van de knoppen klikt verschijnt er in een div.
+U heeft op knop C geklikt.
+ 
+Op het moment dat je op knop D klikt verschijnt er in een div.
+U heeft op knop C geklikt.
+U heeft op knop D geklikt.
+ 
+Hij houd dus jouw knop-klik history bij
+*/
+
+var knopa = 0
+function functie4a(){
+  knopa++
+  console.log(knopa)
+  document.getElementById("demo").innerHTML += "<br>" + "U heeft op knop A geklikt";
+}
+
+var knopb = 0
+function functie4b(){
+  knopb++
+  console.log(knopb)
+  document.getElementById("demo").innerHTML += "<br>" + "U heeft op knop B geklikt";
+}
+
+var knopc = 0
+function functie4c(){
+  knopc++
+  console.log(knopc)
+  document.getElementById("demo").innerHTML += "<br>" + "U heeft op knop C geklikt";
+}
+
+var knopd = 0
+function functie4d(){
+  knopd++
+  console.log(knopd)
+  document.getElementById("demo").innerHTML += "<br>" + "U heeft op knop D geklikt";
+}
+
+</script>
+
+</body>
+</html>

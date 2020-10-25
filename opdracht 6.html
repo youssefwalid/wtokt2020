@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+
+<body>
+
+<h2>Mini Opdracht 6</h2>
+
+<input type="image" id="seizoen" height="200">
+<br>
+<input type="button" id="knop6" value="Volgend seizoen" onclick="functie6()">
+<br>
+<div id=div6 > </div>
+
+<script>
+/*
+6.
+Maak een afbeelding zichtbaar in je scherm.
+Maak een knop.
+ 
+Als ik op de knop klik, verandert de afbeelding naar een nieuwe afbeelding.
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb
+ 
+ADVANCED: Klik door vier seizoenen heen. Plaatje van de Zomer, Herfst, Winter, Lente. Na iedere winter is er 1 jaar voorbij. In de div staat na 13 keer klikken. Er zijn 3 jaren voorbij.
+*/
+
+// image sources in array. image[0] will have first image src, image[3] will have last src
+var afbeeldingen = [
+  "zomer.jpg",
+  "herfst.jpg",
+  "winter.jpg",
+  "lente.jpg"
+]
+
+var step = 0;
+var jaren = 0;
+functie6(); // set first image src after page loads
+
+function functie6() {
+  // exit if no images, or step = number of items in array (4)
+  if (step == afbeeldingen.length){
+      step = [0];
+  }
+
+  document.getElementById('seizoen').src = afbeeldingen[step];
+  step++;
+
+  if (step == [3]){
+      jaren++;
+  }
+  console.log(jaren);
+  document.getElementById('div6').innerHTML = 'Er zijn ' + jaren + ' jaren voorbij.'
+}
+
+</script>
+
+</body>
+</html>

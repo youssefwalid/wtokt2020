@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+
+<body>
+
+<h2>Mini Opdracht 8</h2>
+<br>
+<input type="image" id="AFBA8" height="200" onclick="functie8()">
+<input type="image" id="AFBB8" height="200">
+
+<script>
+/*
+8.
+Maak 2 afbeeldingen. AFBA en AFBB
+Op het moment dat je op AFBA klikt gaat hij een seizoen verder.
+Op het moment dat AFBA op de lente komt, verschijnt er bij AFBB een foto met lammetjes.
+Als AFBA weer van de lente afgaat, verdwijnt of verandert AFBB naar een andere foto.
+Totdat je weer op lente komt.
+etc.
+*/
+
+var afbeeldingen8 = [
+    "zomer.jpg",
+    "herfst.jpg",
+    "winter.jpg",
+    "lente.jpg"
+]
+
+var lammetjes = "lammetjes.jpg"
+
+step8 = 0;
+functie8();
+
+function functie8(){
+
+    if (step8 == afbeeldingen8.length){
+        step8 = [0];
+    }
+
+document.getElementById("AFBA8").src = afbeeldingen8[step8];
+step8++;
+
+
+    if (step8 == [4]){
+        document.getElementById("AFBB8").src = lammetjes;
+    } else{
+        document.getElementById("AFBB8").src = "void";
+    }
+}
+
+
+</script>
+
+</body>
+</html>

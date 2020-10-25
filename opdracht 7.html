@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+
+<body>
+
+<h2>Mini Opdracht 7</h2>
+<br>
+<input type="image" id="AFBA" height="200" value="AFBA">
+<input type="image" id="AFBB" height="200" value="AFBB">
+<br>
+<input type="button" id="KNA" value="KNA" onclick="functie7A()">
+<input type="button" id="KNB" value="KNB" onclick="functie7B()">
+<input type="button" id="KNC" value="KNC" onclick="functie7C()">
+
+<script>
+/*
+7. 
+Maak 2 afbeeldingen zichtbaar in je scherm. AFBA en AFBB
+Maak 3 knoppen. KNA KNB KNC
+ 
+KNA klik je op om AFBA door de seizoenen-afbeeldingen heen te doen.
+KNB klik je op om AFBB door de seizoenen-afbeeldingen heen te doen.
+ 
+Op KNC klik je EN
+- als dezelfde afbeeldingen op beide plekken staan console log je (HETZELFDE)
+- als verschillende afbeeldingen op beide plekken staan console log je (NIET HETZELFDE)
+*/
+
+var afbeeldingen7 = [
+    "zomer.jpg",
+    "herfst.jpg",
+    "winter.jpg",
+    "lente.jpg"
+]
+
+var stepA = 0;
+var stepB = 0;
+functie7A();
+functie7B();
+
+function functie7A(){
+    if (stepA == afbeeldingen7.length){
+        stepA = [0];
+    }
+
+document.getElementById("AFBA").src = afbeeldingen7[stepA];
+stepA++;
+}
+
+function functie7B(){
+    if (stepB == afbeeldingen7.length){
+        stepB = [0];
+    }
+
+document.getElementById("AFBB").src = afbeeldingen7[stepB];
+stepB++;
+}
+
+function functie7C(){
+    if (stepA == stepB){
+        console.log("Hetzelfde")
+    }
+
+    else if (stepA !== stepB){
+        console.log("Niet hetzelfde")
+    }
+}
+
+</script>
+
+</body>
+</html>
